@@ -5,10 +5,16 @@ spring:
       path: /h2
 
   datasource:
-    url: jdbc:h2:file:~/test
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/agroeti
+      username: root
+      password: admin
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl.auto: update
+    generate-ddl: true
+    show-sql: true
       
       
   security:
